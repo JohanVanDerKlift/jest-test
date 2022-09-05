@@ -6,8 +6,8 @@
     - Arrange (klaarzetten)
     - Act (handelen)
     - Assert (beweren)
-[] Je weet hoe je de Jest expect functie gebruikt
-[] Je weet hoe je de code loskoppelt van de test
+[x] Je weet hoe je de Jest `expect` functie gebruikt
+[x] Je weet hoe je de code loskoppelt van de test
 
 ## stappenplan
 1. Maak een package.json aan door npm te initialiseren (`npm init`)
@@ -19,4 +19,10 @@
 7. Test altijd eerst even of dit werkt met een `console.log` en voer het test commando uit: `npm run test'
 8. ARRANGE: zet de waardes klaar waar je mee gaat testen
 9. ACT: voer de functie uit en geef de gecontroleerde waardes daaraan mee
-10. ASSERT: maak een bewering over de verwachte uitkomst en vergelijk dit met de werkelijke uitkomst
+10. ASSERT: maak een bewering over de verwachte uitkomst en vergelijk dit met de daadwerkelijke uitkomst door middel 
+    van de `expect` functie, met daaraan een beweringsfunctie gekoppeld zoals `toEqual`
+11. Maak een apart bestand met een gewone `.js` extentie (zoals index.js)
+12. Plak de functies daarin en haal ze weg uit het test-bestand
+13. Exporteer de functies met `module.exports = { naam: functienaam }`
+14. Importeer de functie met de `require` functie die wijst naar het pad waar de functies in staan (`const add = require(../index.js`)
+15. Bonus: schrijf het netter op door destructoring te gebruiken `cont { add } = require('../index.js)`
